@@ -1,0 +1,21 @@
+* { box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
+body { margin: 0; background: #f4f6f9; color: #1a202c; }
+.login-container { max-width: 400px; margin: 60px auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+h1 { margin: 0 0 0.25rem; font-size: 1.5rem; color: #0f2942; }
+.subtitle { margin: 0 0 1.5rem; color: #4a5568; font-size: 0.95rem; }
+.form-group { margin-bottom: 1rem; }
+label { display: block; font-weight: 600; margin-bottom: 0.35rem; }
+input { width: 100%; padding: 0.65rem; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 1rem; }
+input:focus { outline: 3px solid #2b6cb0; border-color: #2b6cb0; }
+button { width: 100%; padding: 0.75rem; background: #0f2942; color: #fff; border: none; border-radius: 6px; font-size: 1rem; font-weight: 600; cursor: pointer; }
+button:hover { background: #1a365d; }
+.error-msg { color: #c53030; font-size: 0.9rem; min-height: 1.2rem; }
+.demo-creds { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; color: #4a5568; }
+.topbar { background: #0f2942; color: #fff; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+.topbar h1 { color: #fff; font-size: 1.2rem; }
+.btn-secondary { width: auto; padding: 0.4rem 0.9rem; background: #e53e3e; margin-left: 0.75rem; }
+.dashboard { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.card { background: #fff; padding: 1.25rem; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 4px solid #0f2942; }
+.card h3 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+.card p { margin: 0; font-size: 0.9rem; color: #4a5568; }
