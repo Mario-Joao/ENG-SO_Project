@@ -1,13 +1,14 @@
 # Caderneta Digital do Coordenador de Turno
 
 **Disciplina:** Engenharia de Software I (2026/2027) — ISPTEC  
-**Turma:** [Indicar Turma]  
+**Turma:** M3  
 **Grupo:** [Indicar Grupo]  
 
 ## Membros do Grupo
 * Mário da Silva João (Scrum Master)
-* Rel (Product Owner)
-* Del (Developer)
+* Délcia Nsimba Dombele Nzila (Product Owner)
+* Realdino Vasco Francisco (Developer)
+* Ricardo Pembele (Developer)
 
 ## Links do Projecto
 * **Repositório:** https://github.com/Mario-Joao/ENG-SO_Project
