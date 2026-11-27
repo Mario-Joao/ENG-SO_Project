@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
+    <meta name="description" content="Kutumina - Plataforma de Gestão e Consolidação de Investimentos e Património.">
+
+    <title>Kutumina | Gestão de Investimentos</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Navegação principal -->
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="Kutumina - Página inicial">Kutu<span>Mina</span></a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+            <ul>
+                <li><a href="#" aria-current="page">Dashboard</a></li>
+                <li><a href="#transacoes">Transacções</a></li>
+                <li><a href="#corretoras">Corretoras</a></li>
+                <li><a href="#configuracoes">Configurações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content" id="content">
+
+        <main id="main">
+
+            <!-- Cabeçalho da Página -->
+            <div class="page-title">
+                <div>
+                    <h1>Dashboard de Património</h1>
+                    <p>Visão consolidada de todas as corretoras</p>
+                </div>
+
+                <button
+                    type="button"
+                    class="btn btn--primary"
+                    id="openTransaction"
+                    aria-expanded="false"
+                    aria-controls="transacoes">
+                    + Nova Transacção
+                </button>
+            </div>
+
+            <!-- Indicadores (KPIs) -->
+            <section class="kpi-grid" aria-label="Indicadores principais">
+                <article class="card kpi">
+                    <h2 class="kpi__label">Total Investido</h2>
+                    <p class="kpi__value">12 450 000,00 Kz</p>
+                </article>
+
+                <article class="card kpi">
+                    <h2 class="kpi__label">Saldo Atual</h2>
+                    <p class="kpi__value">14 872 300,00 Kz</p>
+                </article>
+
+                <article class="card kpi">
+                    <h2 class="kpi__label">ROI Líquido</h2>
+                    <p class="kpi__value gain" aria-label="Ganho de 19.45%">+19,45%</p>
+                </article>
+
+                <article class="card kpi">
+                    <h2 class="kpi__label">CAGR</h2>
+                    <p class="kpi__value gain" aria-label="Ganho anualizado de 11.20%">+11,20%</p>
+                </article>
+            </section>
+
+            <!-- Gráficos -->
+            <section class="chart-grid" aria-label="Gráficos de desempenho">
+                <article class="card">
+                    <h2 class="card__title">Evolução Patrimonial</h2>
+                    <div class="chart-placeholder" role="img" aria-label="Gráfico de linhas representativo da evolução patrimonial">
+                        Gráfico de linhas (em breve)
+                    </div>
+                </article>
+
+                <article class="card">
+                    <h2 class="card__title">Alocação por Ativos</h2>
+                    <div class="chart-placeholder chart-placeholder--round" role="img" aria-label="Gráfico circular de alocação de ativos">
+                        Gráfico circular (em breve)
+                    </div>
+                </article>
+            </section>
+
+            <!-- Posições Atuais -->
+            <section class="card" id="posicoes">
+                <h2 class="card__title">Posições</h2>
+
+                <div class="table-wrap" tabindex="0" role="region" aria-label="Tabela de posições atuais">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Ticker</th>
+                                <th scope="col">Corretora</th>
+                                <th scope="col" class="num">Quantidade</th>
+                                <th scope="col" class="num">Preço Médio</th>
+                                <th scope="col" class="num">Lucro / Prejuízo</th>
+                                <th scope="col" class="num">Taxas Pagas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">AAPL</th>
+                                <td>Interactive Brokers</td>
+                                <td class="num">25</td>
+                                <td class="num">172,40</td>
+                                <td class="num gain">+ 48 300,00</td>
+                                <td class="num">1 250,00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">VWCE</th>
+                                <td>XTB</td>
+                                <td class="num">120</td>
+                                <td class="num">108,15</td>
+                                <td class="num gain">+ 92 710,00</td>
+                                <td class="num">0,00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">BTC</th>
+                                <td>Binance</td>
+                                <td class="num">0,3500</td>
+                                <td class="num">38 900,00</td>
+                                <td class="num loss">− 21 480,00</td>
+                                <td class="num">3 870,00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">MSFT</th>
+                                <td>Trading 212</td>
+                                <td class="num">10</td>
+                                <td class="num">310,75</td>
+                                <td class="num loss">− 6 120,00</td>
+                                <td class="num">640,00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">OT-2030</th>
+                                <td>BODIVA</td>
+                                <td class="num">500</td>
+                                <td class="num">1 000,00</td>
+                                <td class="num gain">+ 74 000,00</td>
+                                <td class="num">2 100,00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Histórico de transacções -->
+            <section class="card" id="historico">
+                <h2 class="card__title">Histórico de Transacções</h2>
+
+                <div class="table-wrap" tabindex="0" role="region" aria-label="Tabela do histórico de transacções">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Operação</th>
+                                <th scope="col">Tipo de Activo</th>
+                                <th scope="col">Corretora</th>
+                                <th scope="col" class="num">Quantidade</th>
+                                <th scope="col" class="num">Preço Unitário</th>
+                                <th scope="col" class="num">Taxas</th>
+                                <th scope="col">Data</th>
+                                <th scope="col" class="num">Valor Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionHistory">
+                            <tr id="emptyHistory">
+                                <td colspan="8" class="empty-history">
+                                    Ainda não existem transacções registadas.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Painel Lateral: Nova Transacção -->
+        <aside class="side-panel" id="transacoes" aria-labelledby="form-titulo" hidden>
+            <form class="card form" id="transactionForm" novalidate>
+                <div class="panel-header">
+                    <h2 class="card__title" id="form-titulo">
+                        Nova Transacção
+                    </h2>
+
+                    <button type="button"
+                            class="close-panel"
+                            id="closeTransaction"
+                            aria-label="Fechar painel de nova transacção">
+                        &times;
+                    </button>
+                </div>
+
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="operacao">Operação</label>
+                        <select id="operacao" name="operacao" required>
+                            <option value="Compra">Compra</option>
+                            <option value="Venda">Venda</option>
+                            <option value="Recebimento">Recebimento</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="tipo">Tipo de Activo</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="">Selecionar...</option>
+                            <option value="Ações">Ações</option>
+                            <option value="Cripto">Cripto</option>
+                            <option value="Imóveis">Imóveis</option>
+                            <option value="Renda Fixa">Renda Fixa</option>
+                        </select>
+                    </div>
+
+                    <div class="field field--full">
+                        <label for="corretora">Corretora</label>
+                        <select id="corretora" name="corretora" required>
+                            <option value="">Selecionar...</option>
+                            <option value="Interactive Brokers">Interactive Brokers</option>
+                            <option value="XTB">XTB</option>
+                            <option value="Binance">Binance</option>
+                            <option value="Trading 212">Trading 212</option>
+                            <option value="BODIVA">BODIVA</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="quantidade">Quantidade</label>
+                        <input id="quantidade" name="quantidade"
+                               type="number" min="0.00000001"
+                               step="any" placeholder="0" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="preco">Preço unitário (Kz)</label>
+                        <input id="preco" name="preco"
+                               type="number" min="0.01"
+                               step="0.01" placeholder="0,00" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="taxas">Taxas (Kz)</label>
+                        <input id="taxas" name="taxas"
+                               type="number" min="0"
+                               step="0.01" value="0">
+                    </div>
+
+                    <div class="field">
+                        <label for="data">Data</label>
+                        <input id="data" name="data"
+                               type="date" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn--ghost">
+                        Limpar
+                    </button>
+
+                    <button type="submit" class="btn btn--primary">
+                        Registar
+                    </button>
+                </div>
+
+                <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </aside>
+
+    </div>
+
+</div>
+
+</body>
+</html>
