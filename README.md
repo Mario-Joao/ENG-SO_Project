@@ -12,7 +12,7 @@
 
 ## Links do Projecto
 * **Repositório:** https://github.com/Mario-Joao/ENG-SO_Project
-* **Quadro Kanban (GitHub Projects):** [Adicionar link após criar o quadro]
+* **Quadro Kanban (GitHub Projects):** https://github.com/users/Delcia-isptec/projects/1
 
 ## Documentação Técnica
 *(A preencher com instruções de instalação e execução local)*
